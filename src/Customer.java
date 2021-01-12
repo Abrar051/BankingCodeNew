@@ -1,34 +1,32 @@
 import java.util.Scanner;
 class Customer  {
-	Scanner input = new Scanner (System.in);
-    String name;
-    String pass;
-	int acctypeList;
-	int balance;
-	Customer (String name , String password , int acctype , int balance)
-	{
-		this.name=name;
-		this.pass=password;
-		this.acctypeList=acctype;
+	private String name;
+	private String pass;
+
+	private int accNo;
+
+	public int getAccNo() {
+		return accNo;
 	}
-	public void displayData ()
-	{
-		System.out.println ("Your name is "+name);
-		if (acctypeList==1)
-		{
-			System.out.println("Your account type is debit");
-			System.out.println("Your balance is "+balance);
-		}
-		else if (acctypeList==2)
-		{
-			System.out.println("Your account type is credit");
-			System.out.println("Your balance is "+balance);
-		}
-		else if (acctypeList==3)
-		{
-			System.out.println("Your account type is savings");
-			System.out.println("Your balance is "+balance);
-		}
+
+	public void setAccNo(int accNo) {
+		this.accNo = accNo;
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public String getPass() {
+		return pass;
+	}
+
+	public void setPass(String pass) {
+		this.pass = pass;
 	}
 }
 

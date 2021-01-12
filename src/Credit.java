@@ -1,41 +1,20 @@
 import java.util.Scanner;
 
-public abstract class Credit extends Account {
-	Scanner input = new Scanner(System.in);
-	public int credit (int balance , int moneyChange)
-	{
-		if (balance==0)
-		{
-			System.out.println ("Sorry your balance is 0");
-		}
-		else 
-		{   //withdraw 1 deposit 2
-			if (moneyChange==1)
-			{
-				//withdraw 
-				int limit= balance+(balance/2);
-				System.out.println ("Enter withdrawal amount : ");
-				int withdrawAmmount = input.nextInt();
-				if (withdrawAmmount>balance | withdrawAmmount>limit)
-				{
-					System.out.println("Sorry your balance is insufficient or your limit crossed ");
-					return 0;
-				}
-				else
-				{
-					balance=balance-withdrawAmmount;
-					System.out.println ("Your present balance is "+balance);
-					//return balance;
-				}
-			}
-			else if (moneyChange==2)
-			{
-				//desposit
-				System.out.println("Enter deposit amount : ");
-				int depositAmmount = input.nextInt();
-				balance=balance+depositAmmount;
-			}
-		}
-		return balance;
+public class Credit extends Account {
+	public Credit(int amnt) {
+
+		this.amount = amnt;
+	}
+
+	@Override
+	protected void withdraw(float amnt) {
+		if(amnt > (this.amount+(this.amount/2)))
+			return;
+		this.amount-=amnt;
+	}
+
+	@Override
+	protected void deposit(float amnt) {
+
 	}
 }

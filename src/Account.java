@@ -1,17 +1,9 @@
 //Withdraw or deposit
 public abstract class Account  {
+	protected int accNo;
+	protected float amount;
 
-	public void savings ()
-	{
-		
-	}
-	public void debit ()
-	{
-		
-	}
-	public void credit() 
-	{
-		
-	}
+	abstract protected void withdraw(float amnt);
+	abstract protected void deposit(float amnt);
 }
 
