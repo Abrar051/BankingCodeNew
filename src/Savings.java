@@ -26,6 +26,13 @@ public  class Savings extends Account {
 					//return balance;
 				}
 			}
+			else if (moneyChange==2)
+			{
+				//desposit
+				System.out.println("Enter deposit amount : ");
+				int depositAmmount = input.nextInt();
+				balance=balance+depositAmmount;
+			}
 		}
 		return balance;
 	}
