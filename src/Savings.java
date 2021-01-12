@@ -30,4 +30,3 @@ public  class Savings extends Account {
 		return balance;
 	}
 }
-
