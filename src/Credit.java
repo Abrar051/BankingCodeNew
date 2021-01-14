@@ -1,8 +1,8 @@
 import java.util.Scanner;
 
 public class Credit extends Account {
-	public Credit(int amnt) {
-
+	public Credit(int accNo, float amnt) {
+		this.accNo = accNo;
 		this.amount = amnt;
 	}
 
@@ -11,10 +11,5 @@ public class Credit extends Account {
 		if(amnt > (this.amount+(this.amount/2)))
 			return;
 		this.amount-=amnt;
-	}
-
-	@Override
-	protected void deposit(float amnt) {
-
 	}
 }

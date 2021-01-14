@@ -2,8 +2,13 @@ import java.util.Scanner;
 class Customer  {
 	private String name;
 	private String pass;
-
 	private int accNo;
+
+	public Customer(String name, String pass, int accNo) {
+		this.name = name;
+		this.pass = pass;
+		this.accNo = accNo;
+	}
 
 	public int getAccNo() {
 		return accNo;
